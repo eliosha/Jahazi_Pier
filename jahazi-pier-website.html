@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jahazi Pier — Lake Victoria, Munyonyo</title>
+  <meta name="description" content="Jahazi Pier is Kampala's most beloved lakeside sanctuary on Lake Victoria, Munyonyo. Fresh lake fish, boat rides, wildlife, and stunning views." />
+  <!-- Favicon — replace with your actual logo file path -->
+  <link rel="icon" type="image/png" href="./img/logo.png" />
+  <link rel="apple-touch-icon" href="./img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome 6 — real brand icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Jahazi Pier</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#location">Location</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Plan Your Visit</a>
+  <div class="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Munyonyo · Lake Victoria · Kampala, Uganda</p>
+    <h1 class="hero-title">Jahazi<br><em>Pier</em></h1>
+    <p class="hero-tagline">Relax, Unwind, and Experience Nature</p>
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn-primary">View Menu</a>
+      <a href="#reviews" class="btn-outline">Read Reviews</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="scroll-text">Discover</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in-up">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">Where <em>Nature</em><br>Meets the Lake</h2>
+        <div class="divider"></div>
+        <p>Nestled along the serene shores of Murchison Bay on Lake Victoria, Jahazi Pier is Kampala's most beloved lakeside sanctuary — a place where the city's pace dissolves into the gentle rhythm of lapping water.</p>
+        <p>From the moment you arrive, you are enveloped by manicured lawns, towering fruit trees, and the calming presence of the lake. Wildlife moves freely here — marabou storks wade at the shoreline, colourful kingfishers dart between branches, and playful vervet monkeys keep watch from above.</p>
+        <p>Our chefs craft every dish with fresh-caught fish from the lake, local produce, and a passion for authentic East African flavours. Whether you come for a quiet afternoon with a book, a family picnic, a celebratory event, or a boat ride into the sunset — Jahazi Pier is the lakeside escape you have always needed.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">4.1★</div>
+            <div class="stat-label">Google Rating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">745+</div>
+            <div class="stat-label">Guest Reviews</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">~13km</div>
+            <div class="stat-label">From City Centre</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Open</div>
+            <div class="stat-label">Every Day, 10am–9pm</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-images fade-in-up">
+        <div class="about-img" onclick="openLightbox('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80')">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80" alt="Lake Victoria at Jahazi Pier" loading="lazy" />
+        </div>
+        <div class="about-img" onclick="openLightbox('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80')">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Lush garden grounds" loading="lazy" />
+        </div>
+        <div class="about-img" onclick="openLightbox('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80')">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Outdoor seating area" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon">🐦</div>
+        <h3>Rich Wildlife</h3>
+        <p>Marabou storks, kingfishers, vervet monkeys, and dozens of bird species share the grounds with you.</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon">⛵</div>
+        <h3>Boat Rides</h3>
+        <p>Take a scenic boat ride on Lake Victoria at a negotiable fee — perfect for sunsets and quiet reflection.</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon">🍽️</div>
+        <h3>Fresh Lake Fish</h3>
+        <p>Daily-caught fish, grilled on the spot. Albert and Karanja, our chefs, are known across Kampala.</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon">🌿</div>
+        <h3>Eco-Conscious</h3>
+        <p>We preserve the natural vegetation, original trees, and local ecosystem — sustainability at heart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header fade-in-up">
+      <p class="section-label">Photo Gallery</p>
+      <h2 class="section-title">Life at the <em>Pier</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80')">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Lake Victoria panorama" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Grilled fish" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80" alt="Outdoor dining" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80" alt="Tropical garden" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Restaurant table" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1548612823-5a32f12735a7?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1548612823-5a32f12735a7?w=600&q=80" alt="Lakeside sunset" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&q=80" alt="Bird life" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=700&q=80" alt="African cuisine" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1511497584788-876760111969?w=1200&q=80')">
+        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=400&q=80" alt="Green nature" loading="lazy" />
+        <div class="gallery-overlay"><span>+</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MENU PREVIEW ── -->
+<section id="menu-preview">
+  <div class="container">
+    <div class="menu-preview-inner">
+      <div class="menu-preview-text fade-in-up">
+        <p class="section-label">Flavours of the Lake</p>
+        <h2 class="section-title">Fresh, Organic<br>&amp; <em>Delicious</em></h2>
+        <div class="divider"></div>
+        <p>From freshly caught Nile perch and tilapia to slow-roasted goat served with crispy fries, our kitchen celebrates the rich produce of Uganda and the East African region. Organic, vegan, and halal options are always available.</p>
+        <a href="menu.html" class="btn-menu-full">
+          View Full Menu →
+        </a>
+      </div>
+      <div class="menu-cards fade-in-up">
+        <div class="menu-preview-card">
+          <div class="menu-item-info">
+            <h4>Grilled Nile Perch</h4>
+            <p>Fresh from Lake Victoria, grilled over charcoal</p>
+          </div>
+          <span class="menu-item-price">UGX 35,000</span>
+        </div>
+        <div class="menu-preview-card">
+          <div class="menu-item-info">
+            <h4>Pan-Fried Goat with Chips</h4>
+            <p>Slow-cooked goat, crispy golden fries, house sauce</p>
+          </div>
+          <span class="menu-item-price">UGX 45,000</span>
+        </div>
+        <div class="menu-preview-card">
+          <div class="menu-item-info">
+            <h4>Rolex Breakfast</h4>
+            <p>Spiced egg omelette rolled in a soft chapati</p>
+          </div>
+          <span class="menu-item-price">UGX 15,000</span>
+        </div>
+        <div class="menu-preview-card">
+          <div class="menu-item-info">
+            <h4>African Coffee Pot</h4>
+            <p>Rich, full-bodied Ugandan arabica</p>
+          </div>
+          <span class="menu-item-price">UGX 12,000</span>
+        </div>
+        <div class="menu-preview-card">
+          <div class="menu-item-info">
+            <h4>Fresh Fruit Platter</h4>
+            <p>Seasonal mango, guava, papaya from our orchards</p>
+          </div>
+          <span class="menu-item-price">UGX 18,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ── -->
+<section id="reviews">
+  <div class="container">
+    <div class="reviews-header fade-in-up">
+      <p class="section-label">What Guests Say</p>
+      <h2 class="section-title">Stories from the <em>Shore</em></h2>
+      <div class="divider"></div>
+      <div class="rating-banner">
+        <div class="rating-big">4.1</div>
+        <div>
+          <div class="stars-row">★★★★☆</div>
+          <div class="rating-label">from 745+ Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <!--CARD 1 -->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Very delicious food and so many options on the menu, there's more than enough space. Tight security, beautiful natural views, extraordinary customer service and a huge parking space.</p>
+        <div class="review-author">
+          <div class="review-avatar">CH</div>
+          <div>
+            <div class="review-name">Clara “Hillz” Hilda</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/io7UA2SNkhQgAGpK8" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+      <!--CARD 2-->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">You have to pay 4K on weekdays and you receive a drink with that entry fee, on weekends it’s 5k and no drinks included. Despite the entry fee it’s a lovely place, clean and tables and chairs available and waiters. you can pay with cash or mobile money.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--water)">AG</div>
+          <div>
+            <div class="review-name">Ayen Gai Ayuen</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/2xahsAsFL1eQT1QL9" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+      <!--CARD 3-->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">It’s always a great experience at Jahazi, very delicious food and so many options on the menu, there’s more than enough space❣️
+        Tight security, Beautiful and natural views, extraordinary customer service and a huge parking space.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--bark)">VA</div>
+          <div>
+            <div class="review-name">Vianney A</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/bj3kutd2Vkro3KSV6" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+      <!--CARD 4-->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">What an amazing place, right next to the greatest lake in Africa wow, so much potential. This place just needs a bit of TLC that’s tender loving care for those that don’t know 🤣 and a bit of capital. Right now you can come and enjoy fresh fish, cooked on the spot, it takes time but it’s worth the wait.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--sage)">LT</div>
+          <div>
+            <div class="review-name">Lee Taylor</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <!-- Replace the href below with the actual Google Maps review link -->
+        <a href="https://maps.app.goo.gl/eZ7ofawh3JSmQVQx9" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+      <!--CARD 5-->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">It’s a natural place to chill in rich with trees and beach… it has a cool environment greatly for picnic and fun moments. Jahazi pier is a place to chill with friends and families.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--forest)">OM</div>
+          <div>
+            <div class="review-name">Oscar Magezi Okecha</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/SwiHz6g44JjzvRkx6" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+      <!--CARD 6-->
+      <div class="review-card fade-in-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">This venue is located in Munyonyo, a surburb of Kampala, overlooking Murchison Bay on Lake Victoria.
+There is front gate security. You are immediately struck by the beauty and tranquility of the grounds. A large variety of trees, half of them fruit, sit on a mixture of natural vegetation  and well kept lawns.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--deep)">PS</div>
+          <div>
+            <div class="review-name">Paul Sozi</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/3mab1qbXq8oQN5qu9" target="_blank" rel="noopener" class="review-link">
+          <svg class="google-g" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read on Google
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCATION ── -->
+<section id="location">
+  <div class="container">
+    <div class="fade-in-up" style="margin-bottom:3rem">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">On the <em>Shores</em> of Lake Victoria</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="location-grid">
+      <div class="location-info fade-in-up">
+        <h3>Jahazi Pier</h3>
+        <div class="location-detail">
+          <span class="loc-icon">📍</span>
+          <div>
+            <div class="loc-label">Address</div>
+            <div class="loc-value">Off Wavamunno Road, Munyonyo<br>Kampala, Uganda<br>~13km from City Centre</div>
+          </div>
+        </div>
+        <div class="location-detail">
+          <span class="loc-icon">📞</span>
+          <div>
+            <div class="loc-label">Phone</div>
+            <div class="loc-value">+256 772 326 441</div>
+          </div>
+        </div>
+        <div class="location-detail">
+          <span class="loc-icon">🕙</span>
+          <div>
+            <div class="loc-label">Opening Hours</div>
+            <div class="hours-grid">
+              <div class="hour-row"><span class="day">Mon – Fri</span><span>10:00 AM – 9:00 PM</span></div>
+              <div class="hour-row"><span class="day">Saturday</span><span>10:00 AM – 12:00 AM</span></div>
+              <div class="hour-row"><span class="day">Sunday</span><span>10:00 AM – 9:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="location-detail">
+          <span class="loc-icon">🎟️</span>
+          <div>
+            <div class="loc-label">Entry Fee</div>
+            <div class="loc-value">Weekdays: UGX 4,000 (incl. drink)<br>Weekends: UGX 5,000</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-container fade-in-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.9256959017065!2d32.62465507496566!3d0.23806840000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d960a8ead5df9%3A0x97e01d8159e94489!2sJahazi%20Pier!5e0!3m2!1sen!2sug!4v1712700000000!5m2!1sen!2sug"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Jahazi Pier Location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Visit Us</p>
+    <h2 class="section-title">Plan Your <em>Escape</em></h2>
+    <div class="divider"></div>
+    <p>Whether it's a quiet afternoon by the water, a family feast, a boat adventure, or an event under the stars — Jahazi Pier is ready to welcome you to the shores of Lake Victoria.</p>
+    <div class="contact-actions">
+      <a href="https://maps.google.com/?q=Jahazi+Pier+Munyonyo+Kampala" target="_blank" class="btn-visit">Plan Your Visit</a>
+      <a href="tel:+256772326441" class="btn-call">Call +256 772 326 441</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <!-- Wave top border -->
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1a2820"/>
+      </svg>
+    </div>
+
+    <img src="./img/logo.png" alt="Jahazi Pier" class="footer-logo" />
+
+    <p class="footer-tagline">Relax, Unwind &amp; Experience Nature</p>
+
+    <!-- Social icons -->
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/jahazipier/" target="_blank" rel="noopener"
+         class="social-icon social-icon--instagram" aria-label="Follow us on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="social-label">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/1508786229438790?ref=NONE_xav_ig_profile_page_web" target="_blank" rel="noopener"
+         class="social-icon social-icon--facebook" aria-label="Find us on Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="social-label">Facebook</span>
+      </a>
+      <a href="https://linktr.ee/jahazipier?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnOGfTy0cs22kMyBUeYzEqutscF2AeB3Iem0Pvd-lDtECPckwCUnAMdl1Hie4_aem_DeRM4I2eyAQo8Iw3Jb5TpQ" target="_blank" rel="noopener"
+         class="social-icon social-icon--linktree" aria-label="All our links on Linktree">
+        <i class="fa-brands fa-linktree"></i>
+        <span class="social-label">Linktree</span>
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Jahazi Pier &nbsp;·&nbsp; Off Wavamunno Road, Munyonyo, Kampala, Uganda</p>
+      <p><a href="tel:+256772326441">+256 772 326 441</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="Gallery image" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

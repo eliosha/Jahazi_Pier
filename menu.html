@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Jahazi Pier, Lake Victoria</title>
+  <meta name="description" content="Explore the full menu at Jahazi Pier — fresh lake fish, East African mains, tropical drinks and desserts. Kampala's finest lakeside dining." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome 6 — brand icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ── SECTION BACKGROUND IMAGES ── */
+    #section-breakfast {
+      background-image:
+        linear-gradient(to bottom, rgba(255,248,235,0.92), rgba(255,248,235,0.88)),
+        url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-snacks {
+      background-image:
+        linear-gradient(to bottom, rgba(255,245,230,0.92), rgba(255,245,230,0.88)),
+        url('https://images.unsplash.com/photo-1541014741259-de529411b96a?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-salads {
+      background-image:
+        linear-gradient(to bottom, rgba(235,245,235,0.92), rgba(235,245,235,0.88)),
+        url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-mains {
+      background-image:
+        linear-gradient(to bottom, rgba(240,235,225,0.92), rgba(240,235,225,0.88)),
+        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-pizza {
+      background-image:
+        linear-gradient(to bottom, rgba(255,245,235,0.92), rgba(255,245,235,0.88)),
+        url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-burgers {
+      background-image:
+        linear-gradient(to bottom, rgba(255,245,230,0.93), rgba(255,245,230,0.88)),
+        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-toshare {
+      background-image:
+        linear-gradient(to bottom, rgba(245,238,228,0.92), rgba(245,238,228,0.88)),
+        url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-drinks {
+      background-image:
+        linear-gradient(to bottom, rgba(235,245,250,0.92), rgba(235,245,250,0.88)),
+        url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-desserts {
+      background-image:
+        linear-gradient(to bottom, rgba(255,245,240,0.92), rgba(255,245,240,0.88)),
+        url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #section-kids {
+      background-image:
+        linear-gradient(to bottom, rgba(245,250,255,0.92), rgba(245,250,255,0.88)),
+        url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1400&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* ── GOOGLE MAPS BUTTON ── */
+    .gmaps-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem 1rem 1rem;
+    }
+    .gmaps-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #fff;
+      border: 2px solid #1a73e8;
+      color: #1a73e8;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 0.75rem 1.6rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(26,115,232,0.15);
+    }
+    .gmaps-btn:hover {
+      background: #1a73e8;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(26,115,232,0.3);
+    }
+    .gmaps-btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* ── EXTRAS NOTE ── */
+    .menu-extras-note {
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      color: #888;
+      font-style: italic;
+      padding: 0.5rem 1rem 2rem;
+    }
+    .menu-extras-note strong {
+      color: #555;
+      font-style: normal;
+    }
+
+    /* ── PRICE RANGE (for items with multiple sizes) ── */
+    .dish-price-range {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 0.15rem;
+    }
+
+    /* ── TABS SCROLLABLE ON MOBILE ── */
+    .menu-tabs {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .menu-tabs::-webkit-scrollbar { display: none; }
+    .menu-tab { flex-shrink: 0; }
+  </style>
+</head>
+<body class="menu-page">
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar" class="scrolled">
+  <a href="jahazi-pier-website.html" class="nav-logo">Jahazi Pier</a>
+  <ul class="nav-links">
+    <li><a href="jahazi-pier-website.html#about">About</a></li>
+    <li><a href="jahazi-pier-website.html#gallery">Gallery</a></li>
+    <li><a href="menu.html" style="color: var(--forest);">Menu</a></li>
+    <li><a href="jahazi-pier-website.html#reviews">Reviews</a></li>
+    <li><a href="jahazi-pier-website.html#location">Location</a></li>
+  </ul>
+  <a href="jahazi-pier-website.html#contact" class="nav-cta">Plan Your Visit</a>
+  <div class="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="menu-hero">
+  <div class="menu-hero-inner">
+    <p class="menu-hero-eyebrow">Munyonyo · Lake Victoria · Kampala</p>
+    <h1>Our <em>Menu</em></h1>
+    <p>Fresh from Lake Victoria and the gardens of Munyonyo</p>
+  </div>
+</div>
+
+<!-- ── GOOGLE MAPS BUTTON ── -->
+<div class="gmaps-btn-wrapper">
+  <a
+    class="gmaps-btn"
+    href="https://www.google.com/maps/place/Jahazi+Pier/@0.2382779,32.626758,15z/data=!4m18!1m10!3m9!1s0x177d960a8ead5df9:0x97e01d8159e94489!2sJahazi+Pier!8m2!3d0.2380684!4d32.6268393!10e5!14m1!1BCgIYIA!16s%2Fg%2F11h0pp4cb!3m6!1s0x177d960a8ead5df9:0x97e01d8159e94489!8m2!3d0.2380684!4d32.6268393!10e9!16s%2Fg%2F11h0pp4cb?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </svg>
+    View Menu on Google Maps
+  </a>
+</div>
+
+<!-- ── STICKY TAB BAR ── -->
+<div class="menu-tabs-wrapper">
+  <div class="menu-tabs">
+    <button class="menu-tab active"  onclick="showMenuSection('breakfast', this)">Breakfast</button>
+    <button class="menu-tab"         onclick="showMenuSection('snacks', this)">Snacks</button>
+    <button class="menu-tab"         onclick="showMenuSection('salads', this)">Salads</button>
+    <button class="menu-tab"         onclick="showMenuSection('mains', this)">Main Meals</button>
+    <button class="menu-tab"         onclick="showMenuSection('pizza', this)">Pizza</button>
+    <button class="menu-tab"         onclick="showMenuSection('burgers', this)">Burgers &amp; Sandwiches</button>
+    <button class="menu-tab"         onclick="showMenuSection('toshare', this)">To Share</button>
+    <button class="menu-tab"         onclick="showMenuSection('drinks', this)">Drinks</button>
+    <button class="menu-tab"         onclick="showMenuSection('desserts', this)">Desserts</button>
+    <button class="menu-tab"         onclick="showMenuSection('kids', this)">Kids Corner</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     BREAKFAST
+════════════════════════════════════════════════ -->
+<div class="menu-section active" id="section-breakfast">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Breakfast</h2>
+    <p class="menu-section-sub">Start your day by the lake</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Breakfast Wrap</h4>
+        <p>Egg, grilled vegetables, chicken or beef strips wrapped in a soft flour tortilla, served with home fries and fresh juice</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Jahazi Breakfast Combo</h4>
+        <p>2 pancakes or sliced bread, 2 eggs (any style), 2 sausages, baked beans, grilled tomatoes, tea or coffee and fresh juice</p>
+      </div>
+      <div class="dish-price">UGX 33,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SNACKS
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-snacks">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Snacks</h2>
+    <p class="menu-section-sub">Perfect bites with your lakeside view</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Beef Brochettes</h4></div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Beef Sausages</h4></div>
+      <div class="dish-price">UGX 10,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Chicken Wings</h4></div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Chicken Nuggets</h4></div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Chicken Brochettes</h4></div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Fish Fingers</h4></div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Samosas</h4>
+        <p>Beef or Veg</p>
+      </div>
+      <div class="dish-price">UGX 15,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Chips</h4></div>
+      <div class="dish-price">UGX 15,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Masala Chips</h4></div>
+      <div class="dish-price">UGX 20,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info"><h4>Plantain</h4></div>
+      <div class="dish-price">UGX 10,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SALADS
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-salads">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Salads</h2>
+    <p class="menu-section-sub">Fresh, vibrant and made to order</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Greek Salad</h4>
+        <p>Feta cheese, olive oil, black olives, tomatoes, onions and cucumber served with homemade dressing</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Chicken Salad</h4>
+        <p>Grilled chicken strips on a bed of lettuce, tomatoes, onions and mozzarella served with homemade dressing</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Buffalo Salad</h4>
+        <p>Lettuce, onions, chicken, beef, potatoes, olives with a creamy dressing</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     MAIN MEALS
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-mains">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Main Meals</h2>
+    <p class="menu-section-sub">Freshly prepared, celebrating the lake and the land</p>
+  </div>
+  <div class="menu-items-grid">
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Fried Fish</h4>
+        <p>Deep fried whole tilapia served with chips and kachumbari. Wet fry available at an additional UGX 5,000.</p>
+        <div class="dish-price-range">S · M · L</div>
+      </div>
+      <div class="dish-price">UGX 40,000 – 60,000</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Steamed Fish</h4>
+        <p>Lightly seasoned and boiled whole tilapia served with rice, sweet potato or cassava and steamed vegetables</p>
+      </div>
+      <div class="dish-price">UGX 50,000 (M)</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Chef's Special</span>
+        <h4>Grilled Fish</h4>
+        <p>Char grilled whole tilapia served with chips, cassava or sweet potato and kachumbari</p>
+      </div>
+      <div class="dish-price">UGX 50,000 (M)</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Fish Fillet</h4>
+        <p>Served with lemon butter, mushroom or curry sauce, chips and salad</p>
+      </div>
+      <div class="dish-price">UGX 40,000</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Jahazi Chicken</h4>
+        <p>Char grilled chicken served with chips and salad</p>
+      </div>
+      <div class="dish-price">Quarter UGX 30,000 · Whole UGX 70,000</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Creamy Chicken Fillet</h4>
+        <p>Lightly grilled chicken fillet in a creamy sauce served with rice and salad</p>
+      </div>
+      <div class="dish-price">UGX 40,000</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Goat Choma</h4>
+        <p>Charcoal roasted goat meat served with chips and kachumbari</p>
+      </div>
+      <div class="dish-price">UGX 50,000 / kg</div>
+    </div>
+
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Goat Fry</h4>
+        <p>Wet or dry fried goat meat served with chips and kachumbari</p>
+        <div class="dish-price-range">½kg · 1kg</div>
+      </div>
+      <div class="dish-price">UGX 25,000 – 45,000</div>
+    </div>
+
+  </div>
+  <p class="menu-extras-note"><strong>Extras @ UGX 5,000 each:</strong> Rice · Mashed Potatoes · Posho · Cassava</p>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PIZZA
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-pizza">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Pizza</h2>
+    <p class="menu-section-sub">Stone-baked with lakeside flair</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Chicken Pizza</h4>
+        <p>Chicken, mushrooms, onions, tomatoes and mozzarella cheese</p>
+      </div>
+      <div class="dish-price">UGX 35,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Beef Pizza</h4>
+        <p>Minced beef, onions and mozzarella cheese</p>
+      </div>
+      <div class="dish-price">UGX 35,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Vegetarian</span>
+        <h4>Vegetarian Pizza</h4>
+        <p>Spinach, mushrooms, bell peppers, tomatoes, onions and mozzarella cheese</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Margherita</h4>
+        <p>Tomato and mozzarella cheese</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Half &amp; Half</h4>
+        <p>Combine any two pizza flavours in one</p>
+      </div>
+      <div class="dish-price">UGX 35,000</div>
+    </div>
+  </div>
+  <p class="menu-extras-note"><strong>Extra toppings @ UGX 3,000 each:</strong> Cheese · Pineapples</p>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     BURGERS & SANDWICHES
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-burgers">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Burgers &amp; Sandwiches</h2>
+    <p class="menu-section-sub">Satisfying handfuls, served with chips and salad</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Beef Burger</h4>
+        <p>Beef patty in a bun garnished with lettuce, tomatoes, onions and pickles, served with chips and salad</p>
+      </div>
+      <div class="dish-price">UGX 32,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Cheese Burger</h4>
+        <p>Beef patty in a bun garnished with lettuce, tomatoes, onions, pickles and cheese, served with chips and salad</p>
+      </div>
+      <div class="dish-price">UGX 35,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Chicken Burger</h4>
+        <p>Chicken patty in a bun garnished with lettuce, tomatoes, onions and pickles, served with chips and salad</p>
+      </div>
+      <div class="dish-price">UGX 35,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Clubhouse Sandwich</h4>
+        <p>Triple decker sandwich with chicken, eggs, lettuce, pickles, tomatoes and onions, served with chips and salad</p>
+      </div>
+      <div class="dish-price">UGX 30,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     TO SHARE
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-toshare">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">To Share</h2>
+    <p class="menu-section-sub">Generous platters made for the table</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Snack Platter</h4>
+        <p>Choose 3 meats from: Fish Fingers, Chicken Wings, Chicken Brochettes, Beef Brochettes, Meatballs. Choose 3 sides from: Potato Wedges, Sauté Potatoes, Chips, Coleslaw, Garden Salad.</p>
+      </div>
+      <div class="dish-price">UGX 100,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Mixed Grill Platter</h4>
+        <p>Beef satay, goat skewers, chicken skewers, potato wedges and salad</p>
+        <div class="dish-price-range">Large (serves 5–6) · Small (serves 2–3)</div>
+      </div>
+      <div class="dish-price">UGX 80,000 – 110,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     DRINKS
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-drinks">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Drinks</h2>
+    <p class="menu-section-sub">Sip and savour with the lake breeze</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Signature</span>
+        <h4>African Coffee Pot</h4>
+        <p>Rich, full-bodied Ugandan arabica coffee, brewed fresh and served in a traditional pot</p>
+      </div>
+      <div class="dish-price">UGX 12,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Fresh Passion Juice</h4>
+        <p>Freshly squeezed passion fruit, served chilled with optional sugar cane</p>
+      </div>
+      <div class="dish-price">UGX 8,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Mango Smoothie</h4>
+        <p>Blended ripe Ugandan mangoes with a hint of ginger and lime</p>
+      </div>
+      <div class="dish-price">UGX 12,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Masala Chai</h4>
+        <p>Spiced Ugandan tea with cardamom, ginger, cinnamon and hot milk</p>
+      </div>
+      <div class="dish-price">UGX 8,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Cold Beer (Bottle)</h4>
+        <p>Bell, Nile Special, Tusker — served ice cold. Ask about seasonal imports.</p>
+      </div>
+      <div class="dish-price">UGX 6,000+</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Soft Drinks</h4>
+        <p>Sodas, sparkling water, still water — all served chilled</p>
+      </div>
+      <div class="dish-price">UGX 4,000+</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Waragi Cocktail</h4>
+        <p>Uganda's local gin, mixed with tonic, lime, and fresh herbs over ice</p>
+      </div>
+      <div class="dish-price">UGX 18,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Pineapple &amp; Ginger Juice</h4>
+        <p>Cold-pressed pineapple with fresh ginger root — zesty and refreshing</p>
+      </div>
+      <div class="dish-price">UGX 10,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     DESSERTS
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-desserts">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Desserts</h2>
+    <p class="menu-section-sub">Sweet finales inspired by the tropics</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Ice Cream Sundae</h4>
+        <p>2 scoops of ice cream topped with fruits and a choice of chocolate or strawberry sauce</p>
+      </div>
+      <div class="dish-price">UGX 17,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Ice Cream</h4>
+        <p>2 scoops of chocolate, vanilla or strawberry</p>
+      </div>
+      <div class="dish-price">UGX 16,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Vegan</span>
+        <h4>Fruit Platter</h4>
+        <p>Assorted fruits in season</p>
+      </div>
+      <div class="dish-price">UGX 12,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Fried Ripe Plantain</h4>
+        <p>Sweet golden plantain fried until caramelised, served with a scoop of vanilla ice cream</p>
+      </div>
+      <div class="dish-price">UGX 12,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Ugandan Mandazi</h4>
+        <p>Warm coconut doughnut pillows dusted with cinnamon sugar, served with honey</p>
+      </div>
+      <div class="dish-price">UGX 10,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Chocolate Lava Cake</h4>
+        <p>Rich dark chocolate sponge with a molten centre, served warm with cream</p>
+      </div>
+      <div class="dish-price">UGX 22,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     KIDS CORNER
+════════════════════════════════════════════════ -->
+<div class="menu-section" id="section-kids">
+  <div class="menu-section-header">
+    <h2 class="menu-section-title">Kids Corner</h2>
+    <p class="menu-section-sub">Little plates for little adventurers</p>
+  </div>
+  <div class="menu-items-grid">
+    <div class="menu-dish">
+      <div class="dish-info">
+        <h4>Mini Meatballs</h4>
+        <p>Bite-sized beef meatballs served with chips or mashed potatoes</p>
+      </div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+    <div class="menu-dish">
+      <div class="dish-info">
+        <span class="dish-badge">Popular</span>
+        <h4>Crunchy Chicken Strips</h4>
+        <p>Served with chips</p>
+      </div>
+      <div class="dish-price">UGX 25,000</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <!-- Wave top border -->
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1a2820"/>
+      </svg>
+    </div>
+
+    <p class="footer-tagline">Relax, Unwind &amp; Experience Nature</p>
+
+    <!-- Social icons -->
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/jahazipier/" target="_blank" rel="noopener"
+         class="social-icon social-icon--instagram" aria-label="Follow us on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="social-label">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/1508786229438790?ref=NONE_xav_ig_profile_page_web" target="_blank" rel="noopener"
+         class="social-icon social-icon--facebook" aria-label="Find us on Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="social-label">Facebook</span>
+      </a>
+      <a href="https://linktr.ee/jahazipier?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnOGfTy0cs22kMyBUeYzEqutscF2AeB3Iem0Pvd-lDtECPckwCUnAMdl1Hie4_aem_DeRM4I2eyAQo8Iw3Jb5TpQ" target="_blank" rel="noopener"
+         class="social-icon social-icon--linktree" aria-label="All our links on Linktree">
+        <i class="fa-brands fa-linktree"></i>
+        <span class="social-label">Linktree</span>
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Jahazi Pier &nbsp;·&nbsp; Off Wavamunno Road, Munyonyo, Kampala, Uganda</p>
+      <p><a href="tel:+256772326441">+256 772 326 441</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Override the tab switching to match new section IDs
+  function showMenuSection(sectionId, btn) {
+    document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.menu-tab').forEach(b => b.classList.remove('active'));
+    const target = document.getElementById('section-' + sectionId);
+    if (target) target.classList.add('active');
+    if (btn) btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
