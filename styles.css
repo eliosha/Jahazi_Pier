@@ -105,16 +105,78 @@ nav.scrolled .hamburger span { background: var(--charcoal); }
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  background: #1a2e24; /* dark fallback so no white flash */
 }
 .hero-bg {
   position: absolute; inset: 0;
   background:
     linear-gradient(to bottom, rgba(30,50,40,0.45) 0%, rgba(20,40,32,0.3) 40%, rgba(40,60,50,0.6) 100%),
     url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80') center/cover no-repeat;
-  transform: scale(1.04);
-  transition: transform 8s ease-out;
+  transform: scale(1.02);
+  opacity: 0;
+  transition: transform 6s ease-out, opacity 0.8s ease-out;
 }
-.hero-bg.loaded { transform: scale(1); }
+.hero-bg.loaded {
+  opacity: 1;
+}
+.hero-bg.loaded { transform: scale(1); opacity: 1; }
+
+/* Hero pills */
+.hero-pills {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.85s forwards;
+}
+.hero-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9);
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(8px);
+}
+
+/* Floating CTA */
+.float-cta {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 900;
+  background: var(--forest);
+  color: white;
+  padding: 0.85rem 1.8rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px rgba(74,103,65,0.45);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+.float-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.float-cta:hover {
+  background: var(--deep);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(74,103,65,0.55);
+}
 
 /* Shimmer overlay */
 .hero-bg::after {
@@ -400,6 +462,7 @@ section { padding: 7rem 0; }
 .gallery-item:nth-child(7) { grid-column: span 3; grid-row: span 1; }
 .gallery-item:nth-child(8) { grid-column: span 5; grid-row: span 1; }
 .gallery-item:nth-child(9) { grid-column: span 3; grid-row: span 1; }
+.gallery-item:nth-child(10) { grid-column: span 5; grid-row: span 1; }
 
 .gallery-item img {
   width: 100%; height: 100%;
@@ -671,7 +734,7 @@ section { padding: 7rem 0; }
   background: linear-gradient(135deg, var(--deep) 0%, #1a3328 50%, #2c4a3e 100%);
   color: white;
   text-align: center;
-  padding: 7rem 0;
+  padding: 5rem 0 4rem;
 }
 #contact .section-label { color: var(--mist); }
 #contact .section-title { color: white; }
@@ -746,29 +809,13 @@ section { padding: 7rem 0; }
 }
 
 .footer-wave {
-  position: relative;
-  height: 60px;
-  margin-bottom: -1px;
-  overflow: hidden;
-  /* The wave fills from the background above (cream) into the footer dark */
-}
-.footer-wave svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  /* The path fills the footer color so it looks like the wave scoops into the footer */
-  transform: rotate(180deg);
-}
-/* Recolor — the wave should be cream on top of dark footer */
-.footer-wave svg path {
-  fill: var(--cream);
+  display: none; /* hidden — was rendering as white blob */
 }
 
 .footer-inner {
   position: relative;
   z-index: 1;
-  padding: 2.4rem 2rem 3rem;
+  padding: 2rem 2rem 2rem;
   max-width: 700px;
   margin: 0 auto;
 }

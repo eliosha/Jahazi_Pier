@@ -1,15 +1,17 @@
 // ── Nav scroll
 const navbar = document.getElementById('navbar');
+const floatCta = document.getElementById('floatCta');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
+  if (floatCta) floatCta.classList.toggle('visible', window.scrollY > 400);
 });
 
 // ── Hero parallax + load
 const heroBg = document.getElementById('heroBg');
 if (heroBg) {
-  setTimeout(() => heroBg.classList.add('loaded'), 100);
+  setTimeout(() => heroBg.classList.add('loaded'), 50);
   window.addEventListener('scroll', () => {
-    heroBg.style.transform = `scale(1) translateY(${window.scrollY * 0.3}px)`;
+    heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
   });
 }
 
