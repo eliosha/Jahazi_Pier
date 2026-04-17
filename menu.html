@@ -19,70 +19,70 @@
         linear-gradient(to bottom, rgba(255,248,235,0.92), rgba(255,248,235,0.88)),
         url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1400&q=80');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-snacks {
       background-image:
         linear-gradient(to bottom, rgba(255,245,230,0.92), rgba(255,245,230,0.88)),
-        url('https://images.unsplash.com/photo-1541014741259-de529411b96a?w=1400&q=80');
+        url('img/snacks.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-salads {
       background-image:
         linear-gradient(to bottom, rgba(235,245,235,0.92), rgba(235,245,235,0.88)),
-        url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1400&q=80');
+        url('img/salads.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-mains {
       background-image:
         linear-gradient(to bottom, rgba(240,235,225,0.92), rgba(240,235,225,0.88)),
-        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80');
+        url('img/mainmeals.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-pizza {
       background-image:
         linear-gradient(to bottom, rgba(255,245,235,0.92), rgba(255,245,235,0.88)),
-        url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=1400&q=80');
+        url('img/pizza.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-burgers {
       background-image:
         linear-gradient(to bottom, rgba(255,245,230,0.93), rgba(255,245,230,0.88)),
-        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80');
+        url('img/burger_sandwichs.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-toshare {
       background-image:
         linear-gradient(to bottom, rgba(245,238,228,0.92), rgba(245,238,228,0.88)),
-        url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80');
+        url('img/toshare.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-drinks {
       background-image:
         linear-gradient(to bottom, rgba(235,245,250,0.92), rgba(235,245,250,0.88)),
-        url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=1400&q=80');
+        url('img/drinks.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-desserts {
       background-image:
         linear-gradient(to bottom, rgba(255,245,240,0.92), rgba(255,245,240,0.88)),
-        url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1400&q=80');
+        url('img/desserts.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
     #section-kids {
       background-image:
         linear-gradient(to bottom, rgba(245,250,255,0.92), rgba(245,250,255,0.88)),
-        url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1400&q=80');
+        url('img/kidscorner.jpeg');
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center;
     }
 
     /* ── GOOGLE MAPS BUTTON ── */
@@ -142,16 +142,18 @@
     }
 
     /* ── TABS SCROLLABLE ON MOBILE ── */
-    .menu-tabs {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      white-space: nowrap;
-      display: flex;
-      flex-wrap: nowrap;
+    @media (max-width: 700px) {
+      .menu-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 1rem;
+      }
+      .menu-tabs::-webkit-scrollbar { display: none; }
+      .menu-tab { flex-shrink: 0; }
     }
-    .menu-tabs::-webkit-scrollbar { display: none; }
-    .menu-tab { flex-shrink: 0; }
   </style>
 </head>
 <body class="menu-page">
